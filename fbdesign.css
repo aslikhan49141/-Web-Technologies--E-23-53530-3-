@@ -1,0 +1,117 @@
+* {
+    margin: 0px;
+    padding: 5;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display :flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1877f2;
+    padding: 10px 20px 10px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.search {
+    width: 300px;
+    padding: 8px;
+    border-radius: 30px;
+    border: 1px solid black;
+    background-color :white;
+
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+
+.container {
+    display: flex;
+    background-color: #f0f2f5;
+    padding: 15px;
+}
+
+.left-sidebar {
+    width: 20%;
+    padding: 10px;
+}
+
+.menu-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.feed {
+    width: 60%;
+    padding: 10px;
+}
+
+
+.create-post {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.create-post input {
+    flex: 1;
+    padding: 8px;
+}
+
+.create-post button {
+    padding: 8px 15px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.post {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.post-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+    cursor: pointer;
+}
+
+
+.right-sidebar {
+    width: 20%;
+    padding: 10px;
+}
+
+.contact {
+    padding: 8px;
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    color: rgb(17, 0, 255);
+}
