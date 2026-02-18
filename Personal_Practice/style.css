@@ -123,3 +123,27 @@ li {
         columns: 1;
     }
 }
+
+h3 {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    padding: 12px 20px;
+    border-radius: 10px;
+
+    /* Correct gradient usage */
+    background: linear-gradient(to right, #3467b4, #54b0c7);
+
+    /* Add depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    /* Smooth transition effect */
+    transition: 0.3s ease;
+}
+
+/* Optional hover effect */
+h3:hover {
+    transform: scale(1.03);
+    letter-spacing: 1px;
+}
+
