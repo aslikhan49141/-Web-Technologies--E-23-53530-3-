@@ -1,0 +1,125 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #eef2f7, #dbe9f4);
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* Main Container */
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background: #1a73e8;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 32px;
+}
+
+.header h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.job-meta {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 14px;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 40px;
+}
+
+.section h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-left: 5px solid #1a73e8;
+    padding-left: 10px;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h4 {
+    margin-bottom: 8px;
+    color: #1a73e8;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* Benefits Styling */
+.benefits ul {
+    columns: 2;
+}
+
+/* Apply Section */
+.apply-section {
+    background: #1a73e8;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.apply-section a {
+    color: #ffeb3b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.apply-section a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .job-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .benefits ul {
+        columns: 1;
+    }
+}
