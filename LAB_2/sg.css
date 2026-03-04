@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    background:teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con {
+    background: #ffffff;
+    padding: 40px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: .5s ease;
+}
+
+#errorMsg {
+    margin-top: 15px;
+    font-weight: bold;
+    color: red;
+}
+h2 {
+    margin-bottom: 25px;
+    color: #bd0606;
+    justify-content: center;
+}
