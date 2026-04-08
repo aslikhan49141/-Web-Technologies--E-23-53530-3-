@@ -22,7 +22,7 @@ if (!$password) {
 }
 
 if ($hasusernameErr || $haspasswordErr) {
-    header("Location: ../iew/firstcode.php");
+    header("Location: ../view/firstcode.php");
     
 }
 

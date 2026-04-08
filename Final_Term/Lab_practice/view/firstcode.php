@@ -1,4 +1,12 @@
-<?php session_start(); ?>
+<?php 
+ session_start();
+ $usernameErr = $_SESSION["usernameErr"] ?? '';
+ $passwordErr = $_SESSION["passwordErr"] ?? '';
+
+ unset($_SESSION["usernameErr"]);
+ unset($_SESSION["passwordErr"]);
+
+?>
 <html>
     <head>
         <title>Login</title>
@@ -12,7 +20,7 @@
                     <td><input type="text" name="username"></td>
                     <td>
                         <p style="color:red;">
-                            <?php echo $_SESSION["usernameErr"] ?? ''; ?>
+                            <?php echo $usernameErr ?? ''; ?>
                         </p>
                     </td>
                 </tr>
@@ -21,7 +29,7 @@
                     <td><input type="password" name="password"></td>
                     <td>
                         <p style="color:red;">
-                            <?php echo $_SESSION["passwordErr"] ?? ''; ?>
+                            <?php echo $passwordErr ?? ''; ?>
                         </p>
                     </td>
                 </tr>
@@ -30,10 +38,6 @@
                     <td><input type="submit" name="submit" value="Login"></td>
                 </tr>
             </table>
-            <?php
-            unset($_SESSION["usernameErr"]);
-            unset($_SESSION["passwordErr"]);
-            ?>
         </form>
     </body>
 </html>
