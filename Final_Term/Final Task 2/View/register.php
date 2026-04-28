@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php $result = $_SESSION['form_result'] ?? ['errors' => [], 'data' => []]; ?>
-<?php require_once __DIR__ . '/Controller/PreferenceController.php'; ?>
+<?php require_once __DIR__ . '/../Controller/PreferenceController.php'; ?>
 <?php $prefController = new PreferenceController(); ?>
 <?php $themeCSS = $prefController->getThemeCSS(); ?>
 <!DOCTYPE html>

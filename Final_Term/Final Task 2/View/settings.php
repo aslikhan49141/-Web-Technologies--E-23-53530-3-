@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require_once __DIR__ . '/Controller/PreferenceController.php'; ?>
+<?php require_once __DIR__ . '/../Controller/PreferenceController.php'; ?>
 <?php $prefController = new PreferenceController(); ?>
 <?php $themeCSS = $prefController->getThemeCSS(); ?>
 <?php $currentTheme = $prefController->theme; ?>

@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once __DIR__ . '/Controller/AuthController.php';
-require_once __DIR__ . '/Controller/PreferenceController.php';
+require_once __DIR__ . '/../Controller/AuthController.php';
+require_once __DIR__ . '/../Controller/PreferenceController.php';
 
 $authController = new AuthController();
 $prefController = new PreferenceController();
