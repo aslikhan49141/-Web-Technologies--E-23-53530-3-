@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registation Form</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    <h1>Registation Form</h1>
+    <form action="addrecord.php" method="POST">
+
+        <div class="field">
+            <label for="name">Enter Your Name : </label>
+            <input type="text" name="name" id="name" required>
+        </div>
+
+        <div class="field">
+            <label for="age">Age : </label>
+            <input type="number" name="age" id="age" required>
+        </div>
+
+        <div class="field">
+            <label for="email">Email : </label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <hr class="divider">
+
+        <div class="field">
+            <label>Hobbies : </label>
+            <div class="hobby-group">
+                <label class="hobby-label">
+                    <input type="checkbox" name="hobby[]" value="Reading"> Reading
+                </label>
+                <label class="hobby-label">
+                    <input type="checkbox" name="hobby[]" value="Gaming"> Gaming
+                </label>
+                <label class="hobby-label">
+                    <input type="checkbox" name="hobby[]" value="Sports"> Sports
+                </label>
+                <label class="hobby-label">
+                    <input type="checkbox" name="hobby[]" value="Music"> Music
+                </label>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Gender : </label>
+            <div class="gender-group">
+                <label class="gender-label">
+                    <input type="radio" name="gender" value="Male" required> Male
+                </label>
+                <label class="gender-label">
+                    <input type="radio" name="gender" value="Female" required> Female
+                </label>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="field">
+            <label for="password">Password : </label>
+            <input type="password" name="password" id="password" required>
+        </div>
+
+        <div class="field">
+            <label for="confirm_password">Confirm Password : </label>
+            <input type="password" name="confirm_password" id="confirm_password" required>
+        </div>
+
+        <div class="btn-row">
+            <button type="submit" name="submit" value="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+</body>
+</html>
