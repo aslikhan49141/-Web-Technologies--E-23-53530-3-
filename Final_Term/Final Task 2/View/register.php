@@ -1,0 +1,59 @@
+<?php session_start(); ?>
+<?php $result = $_SESSION['form_result'] ?? ['errors' => [], 'data' => []]; ?>
+<?php require_once __DIR__ . '/Controller/PreferenceController.php'; ?>
+<?php $prefController = new PreferenceController(); ?>
+<?php $themeCSS = $prefController->getThemeCSS(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        <?php echo $themeCSS; ?>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+        .error { color: red; font-size: 0.85em; margin-top: 3px; }
+        button { margin-top: 20px; padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .links { margin-top: 15px; text-align: center; }
+    </style>
+</head>
+<body>
+    <h2>Register</h2>
+    <form action="../Controller/validation.php" method="POST">
+        <input type="hidden" name="action" value="register">
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" value="<?= $result['data']['username'] ?? '' ?>">
+        <?php if (!empty($result['errors']['username'])): ?>
+            <div class="error"><?= $result['errors']['username'] ?></div>
+        <?php endif; ?>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="<?= $result['data']['email'] ?? '' ?>">
+        <?php if (!empty($result['errors']['email'])): ?>
+            <div class="error"><?= $result['errors']['email'] ?></div>
+        <?php endif; ?>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <?php if (!empty($result['errors']['password'])): ?>
+            <div class="error"><?= $result['errors']['password'] ?></div>
+        <?php endif; ?>
+
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password">
+        <?php if (!empty($result['errors']['confirm_password'])): ?>
+            <div class="error"><?= $result['errors']['confirm_password'] ?></div>
+        <?php endif; ?>
+
+        <button type="submit">Register</button>
+    </form>
+    <div class="links">
+        <p>Already have an account? <a href="login.php">Login here</a></p>
+        <p><a href="settings.php">Theme Settings</a></p>
+    </div>
+    <?php unset($_SESSION['form_result']); ?>
+</body>
+</html>
