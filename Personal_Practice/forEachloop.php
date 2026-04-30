@@ -6,3 +6,4 @@ foreach ($colors as $i) {
 }
 
 ?>
+ 
