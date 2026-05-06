@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="input">Input:</label>
+    <input type="text" id="input" name="input">
+    
+    <button id="submit">Submit</button>
+    <p id="output"></p>
+    <script>
+        document.getElementById('submit').addEventListener('click', function() {
+            const inputValue = document.getElementById('input').value;
+            document.getElementById('output').textContent = 'You entered: ' + inputValue;
+        });
+    </script>
+
+</body>
+</html>
